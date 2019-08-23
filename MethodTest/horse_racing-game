@@ -1,44 +1,449 @@
+package homework;
 
-package kr.or.ddit.basic;
+import java.util.ArrayList;
+import java.util.Scanner;
 
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
-
-public class T08_FileReaderTest {
+public class Collection_Framework7{
 	
-	public static void main(String[] args) throws IOException {
+	
+	//레이스 탈출
+	public static int inputCheck = 0;
+	//랭크 등록**(도착한 순으로 들어갈 수 있도록 끝날때 입력값 생성)
+	public static ArrayList<String> rank = new ArrayList<>();
+	
+	private static void opening(){
+		
+		for(int i = 0; i < 50; i++) {System.out.println();}
+		
+		System.out.println("  lllllllll       ll                 ll          llllllll     ll  ll");
+		System.out.println("          l  lllllll      llllllll   ll                l      ll  ll");
+		System.out.println("         l        ll      ll    ll   ll               l       ll  ll");
+        System.out.println("        l    lllllll      ll    ll   ll              l      llll  ll"); 
+        System.out.println("       l          ll      ll    ll   ll             l         ll  ll"); 
+        System.out.println("                          ll    ll   llll ");
+        System.out.println("       lllllllllll        llllllll   ll              llllllllllllll"); 
+        System.out.println("     ll	         ll                  ll              ll          ll"); 
+        System.out.println("       lllllllllll                   ll              llllllllllllll" );
+      
 		try {
-			// 문자 기반의 스트림을 이용한 파일내용 읽기
+			Thread.sleep(500);
+		}catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		
+		for(int i = 0; i < 50; i++) {System.out.println();}
 			
-			File f = new File("d:/D_Other/testChar.txt");
+		System.out.println("  kkkkkkkkk       kk                 kk          kkkkkkkk     kk  kk");
+		System.out.println("          k  kkkkkkk      kkkkkkkk   kk                k      kk  kk");
+		System.out.println("         k        kk      kk    kk   kk               k       kk  kk");
+        System.out.println("        k    kkkkkkk      kk    kk   kk              k      kkkk  kk"); 
+        System.out.println("       k          kk      kk    kk   kk             k         kk  kk"); 
+        System.out.println("                          kk    kk   kkkk ");
+        System.out.println("       kkkkkkkkkkk        kkkkkkkk   kk              kkkkkkkkkkkkkk"); 
+        System.out.println("     kk           kk                 kk              kk          kk"); 
+        System.out.println("       kkkkkkkkkkk                   kk              kkkkkkkkkkkkkk" );
+        
+		try {
+			Thread.sleep(500);
+		}catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		for(int i = 0; i < 50; i++) {System.out.println();}
+		
+		System.out.println("  lllllllll       ll                 ll          llllllll     ll  ll");
+		System.out.println("          l  lllllll      llllllll   ll                l      ll  ll");
+		System.out.println("         l        ll      ll    ll   ll               l       ll  ll");
+        System.out.println("        l    lllllll      ll    ll   ll              l      llll  ll"); 
+        System.out.println("       l          ll      ll    ll   ll             l         ll  ll"); 
+        System.out.println("                          ll    ll   llll ");
+        System.out.println("       lllllllllll        llllllll   ll              llllllllllllll"); 
+        System.out.println("     ll           ll                 ll              ll          ll"); 
+        System.out.println("       lllllllllll                   ll              llllllllllllll" );
+		
+        try {
+			Thread.sleep(500);
+		}catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+        
+		for(int i = 0; i < 50; i++) {System.out.println();}
+		
+		System.out.println("  kkkkkkkkk       kk                 kk          kkkkkkkk     kk  kk");
+		System.out.println("          k  kkkkkkk      kkkkkkkk   kk                k      kk  kk");
+		System.out.println("         k        kk      kk    kk   kk               k       kk  kk");
+        System.out.println("        k    kkkkkkk      kk    kk   kk              k      kkkk  kk"); 
+        System.out.println("       k          kk      kk    kk   kk             k         kk  kk"); 
+        System.out.println("                          kk    kk   kkkk ");
+        System.out.println("       kkkkkkkkkkk        kkkkkkkk   kk              kkkkkkkkkkkkkk"); 
+        System.out.println("     kk           kk                  kk              kk          kk"); 
+        System.out.println("       kkkkkkkkkkk                   kk              kkkkkkkkkkkkkk" );
+        
+		try {
+			Thread.sleep(200);
+		}catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+        
+        
+        System.out.println();
+        System.out.println("로딩 중.......");
+        
+        try {
+			Thread.sleep(2000);
+		}catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+        System.out.println();
+        System.out.println("잠시 후 게임이 시작됩니다.");
+        System.out.println();
+        
+        try {
+			Thread.sleep(1000);
+		}catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		String[] a = new String[3];
+		a[0] = "해설진을 모집하고 있습니다.";
+		a[1] = "경기장을 준비하고 있습니다.";
+		a[2] = "경기 준비를 마쳤습니다.";
+		
+		//카운트 다운
+		for(int i = 0; i < 3; i++) {
+			System.out.println(a[i]);
+			try {
+				Thread.sleep(1000);
+			}catch (InterruptedException e) {
+				e.printStackTrace();
+			}
 			
-			// 문자 단위의 입력을 담당하는 Reader형 객체 생성
-			FileReader Readerfr = new FileReader(f);
-			
-			int c = 0;
-			// 방법1
-			
-			while((c = Readerfr.read()) != -1) {
+		}
+		Scanner s = new Scanner(System.in);
+		boolean io = true;
+		
+		System.out.println();
+		System.out.println("시작하시겠습니까?");
+		System.out.println("게임시작 : 0 \t 게임종료 : 1");
+		System.out.print("==>");
+		
+		do{
+			try {
+				int select = Integer.parseInt(s.nextLine());
+					switch(select) {
+					case 0 :
+						io = false;
+						break;
+					case 1 :
+						System.out.println("게임을 종료합니다.");
+						System.exit(0);
+						break;
+					default:
+						System.out.println("잘못입력하셨습니다");
+						System.out.println("다시 입력해주세요");
+						System.out.print("==>");
+						break;
+					}
+			}catch (NumberFormatException e) {
+				System.out.println("잘못입력하셨습니다");
+				System.out.println("다시 입력해주세요");
+				System.out.print("==>");
+			}
+		}while(io);
+        
+		
+	}
 	
-				System.out.print((char) c);
+	
+	//경기 해설자
+	private void caster(int i) {
+		String[] caster1 = new String[21];
+		String[] caster2 = new String[21];
+		//첫번째 캐스터
+		caster1[0] = "임요환 : 자! 경기 시작했습니다.";
+		caster1[1] = "임요환 : 자! 경기 시작했습니다.";
+		caster1[2] = "임요환 : 오늘의 경기는 기대되는 말들이 많죠";
+		caster1[3] = "임요환 : 오늘의 경기는 기대되는 말들이 많죠";
+		caster1[4] = "임요환 : ";
+		caster1[5] = "임요환 : ";
+		caster1[6] = "임요환 : ";
+		caster1[7] = "임요환 : 본인이 2등을 자주 한다고 2번말을 너무 좋아하시는거 아닙니까?";
+		caster1[8] = "임요환 : 본인이 2등을 자주 한다고 2번말을 너무 좋아하시는거 아닙니까?";
+		caster1[9] = "임요환 : ";
+		caster1[10] = "임요환 : ... 자, 잠시 헛소리를 하는 사이 경기는 후반으로 다다르고 있습니다!";
+		caster1[11] = "임요환 : ... 자, 잠시 헛소리를 하는 사이 경기는 후반으로 다다르고 있습니다!";
+		caster1[12] = "임요환 : ";
+		caster1[13] = "임요환 : 상위권 경쟁이 심해지고 있습니다.";
+		caster1[14] = "임요환 : 상위권 경쟁이 심해지고 있습니다.";
+		caster1[15] = "임요환 : 선두권 치열한 싸움!!";
+		caster1[16] = "임요환 : 선두권 치열한 싸움!!";
+		caster1[17] = "임요환 : 1위, 3위간 우위를 정할 수 없는 싸움이 계속됩니다!";
+		caster1[18] = "임요환 : 1위, 3위간 우위를 정할 수 없는 싸움이 계속됩니다!";
+		caster1[19] = "임요환 : 승자는!!!!";
+		caster1[20] = "임요환 : 승자는!!!!";
+		
+		//두번째 캐스터
+		caster2[0] = "홍진호 : 오늘도 명경기를 기대해봅니다.";
+		caster2[1] = "홍진호 : ";
+		caster2[2] = "홍진호 : 맞th읍니다.";
+		caster2[3] = "홍진호 : 제가 경기 thㅣ작전에 선수 인터뷰때 물어본바에 의하면";
+		caster2[4] = "홍진호 : 제가 경기 thㅣ작전에 선수 인터뷰때 물어본바에 의하면";
+		caster2[5] = "홍진호 : 떠오르는 유망주 2번 말! 2번말이 아주 기대됩니다. ";
+		caster2[6] = "홍진호 : 떠오르는 유망주 2번 말! 2번말이 아주 기대됩니다.";
+		caster2[7] = "홍진호 : ";
+		caster2[8] = "홍진호 : 여보세요 전세계 2등 무시합니까?";
+		caster2[9] = "홍진호 : 여보세요 전세계 2등 무시합니까?";
+		caster2[10] = "홍진호 : ";
+		caster2[11] = "홍진호 : ";
+		caster2[12] = "홍진호 : 아니, 저기..";
+		caster2[13] = "홍진호 : 아니, 저기..";
+		caster2[14] = "홍진호 : ";
+		caster2[15] = "홍진호 : (임요환 dog thㅐ...)";
+		caster2[16] = "홍진호 : (임요환 dog thㅐ...)";
+		caster2[17] = "홍진호 : 어..어 어!! 1위, 3위간 치열한 싸움이 계속됩니다";
+		caster2[18] = "홍진호 : 어..어 어!! 1위, 3위간 치열한 싸움이 계속됩니다";
+		caster2[19] = "홍진호 : 승자는!!!!";
+		caster2[20] = "홍진호 : 승자는!!!!";
+		
+		System.out.println(caster1[i]);
+		System.out.println(caster2[i]);
+		System.out.println();
+	}
+	
+	
+	//트랙
+	public static void main(String[] args) {
+		
+		Collection_Framework7.opening();
+		
+		
+		Horse[] horseRace = new Horse[] {
+				new Horse("1번"),
+				new Horse("2번"),
+				new Horse("3번"),
+				new Horse("4번"),
+				new Horse("5번"),
+				new Horse("6번"),
+				new Horse("7번"),
+				new Horse("8번"),
+				new Horse("9번"),
+				new Horse("10번")
+		};
+		
+		// 레이스 스타트
+		for(int i = 0; i< horseRace.length; i++) {
+					horseRace[i].start();
+		}
+		
+		Collection_Framework7 cast = new Collection_Framework7();
+		int count = 0;
+		int castcount = 0;
+		// 출력문
+//		String goal = "";
+		while(true){
 			
+			for(int i = 0; i < 50; i++) {
+				System.out.println();
+			}
+			
+			if(inputCheck != 0) {
+				System.out.println(" 야호!!! 도차아아악!!");
 				
 			}
 			
-			// 방법2
-	//		char[] charArr = new char[10]; // 문자를 담을 배열 선언
-	//		while((c = fr.read(charArr)) != -1) {
-	//			// 문자배열을 이용하여 스트링객체 생성
-	//			String data = new String(charArr, 0, c); 
-	//			
-	//			System.out.println(data);
-	//		}
+			//해설 출력 대사 변경시간
+			if(castcount <21) {
+				cast.caster(castcount);
+				System.out.println();
+			}
+
+			if(count % 2 == 0 && castcount < 21) {
+//				 cast.caster(count);
+				castcount++;
+			}
+			//스킬발동
+			int skill = 10;
+			int chance = (int)(Math.random() * 50);
+			if(chance == 4 || chance == 7 || chance == 11 || chance == 28 || chance == 32 || chance == 44) {
+				for(int s = 0; s<30; s++) {
+					skill = (int)(Math.random() * 10);
+				}
+			}
+
+			for(int i = 0; i < 10; i++) {
+				if(horseRace[i].isRunIO()) {
+					if(skill == i) {
+						System.out.println(horseRace[i].getName() + " : ▶▷B.U.S.T.E.R 달려 달려 달려!!! 히히히히힝히히이이이잉 히히히히잉!!");
+						horseRace[i].setRunRun(true);
+					}else {
+						System.out.println(horseRace[i].getName() + " : " + horseRace[i].getL() + ">" + horseRace[i].getR());
+					}
+				}else {
+					if(horseRace[i].getRanking() <= 3) {
+						System.out.println(horseRace[i].getName() + " : ☆★☆★ ☆★☆★G O A L " + horseRace[i].getRanking() + "등 축하드립니다 ★☆★☆★☆★☆" );
+					}else {
+						System.out.println(horseRace[i].getName() + " : ◆◆◆◆ ◆◆◆◆ G O A L " + horseRace[i].getRanking() + "등 수고하셨습니다 ◆◆◆◆◆◆◆◆ " );
+					}
+				}
+			}
 			
-			Readerfr.close();
-		}catch (IOException e) {
+			//탈출용
+			if(inputCheck == horseRace.length) { break; }
+			
+			//횟수 세기용
+			count++;
+			//경기장을 0.5초당 한번씩 출력
+			try {
+				Thread.sleep(600);
+			}catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+
+		}
+		
+		System.out.println();
+		System.out.println("=============경기 종료============");
+		
+		try {
+			Thread.sleep(1500);
+		}catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+
+		
+
+		System.out.println("잠시 후 결과발표가 있겠습니다.");
+		
+		
+		String[] a = new String[3];
+		a[0] = "쓰리!!";
+		a[1] = "투!!";
+		a[2] = "원!!";
+		
+		//카운트 다운
+		for(int i = 0; i < 3; i++) {
+			System.out.println(a[i]);
+			try {
+				Thread.sleep(1000);
+			}catch (InterruptedException e) {
+				e.printStackTrace();
+			}
 			
 		}
+
+		
+		//결과발표를 위한 공백 처리
+		for(int i = 0; i < 50; i++) {
+		System.out.println();
+		}
+		System.out.println("====경기 결과 발표====");
+		System.out.println("시상자");
+		System.out.println("금메달 : 영광의 1위 " + rank.get(0) + " 말!!!");
+		System.out.println("은메달 : 영광의 2위 " + rank.get(1) + " 말!!!");
+		System.out.println("동메달 : 영광의 3위 " + rank.get(2) + " 말!!!");
+		System.out.println();
+		System.out.println();
+
+		for(int i = 0; i < rank.size(); i++) {
+			System.out.println((i+1) + "등" + " : " + rank.get(i));
+		}
+
+		
+		
+	}
+	
+	
+}
+
+
+class Horse extends Thread {
+	private String l = "";
+	private String r = "";
+	private boolean runIO = true;
+	private int ranking = 0;
+	private boolean runRun = false;
+	
+
+	public String getL() {
+		return l;
+	}
+	public void setL(String l) {
+		this.l = l;
+	}
+	public String getR() {
+		return r;
+	}
+	public void setR(String r) {
+		this.r = r;
+	}
+	public Horse(String name) {
+		setName(name);
+	}
+	public boolean isRunIO() {
+		return runIO;
+	}
+	public void setRunIO(boolean runIO) {
+		this.runIO = runIO;
+	}
+	public int getRanking() {
+		return ranking;
+	}
+	public void setRanking(int ranking) {
+		this.ranking = ranking;
+	}
+	public boolean isRunRun() {
+		return runRun;
+	}
+	public void setRunRun(boolean runRun) {
+		this.runRun = runRun;
 	}
 
+	@Override
+	public void run() {
+		//오른쪽 트랙 먹여두기
+		
+		try {
+			Thread.sleep(500);
+		}catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+
+		for(int i = 0; i <= 50; i++) {
+			//왼쪽트랙 증가
+				r = "";
+				if(runRun) {
+					l += "=====";
+					i += 4;
+					runRun = false;
+				}else {
+					l += "=";
+				}
+			for(int j = i; j < 50; j++) {
+				r += "-";
+				if(i == 50) {
+					r="";
+				}
+			}
+			try {
+				Thread.sleep((int)(Math.random() * 650 + 300));
+			}catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		}
+
+				
+		
+		//도착 정보 입력
+		Collection_Framework7.inputCheck++;
+		setRanking(Collection_Framework7.inputCheck);
+		Collection_Framework7.rank.add(getName());
+		//달리기 종료
+		setRunIO(false);
+		
+	}
+				
 }
+
+
+
+
+
+	
